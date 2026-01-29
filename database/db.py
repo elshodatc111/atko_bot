@@ -61,6 +61,11 @@ class Database:
         if target == "all": return self.cursor.execute("SELECT user_id FROM users").fetchall()
         if target == "no_phone": return self.cursor.execute("SELECT user_id FROM users WHERE phone IS NULL").fetchall()
         return self.cursor.execute("SELECT user_id FROM users WHERE phone IS NOT NULL").fetchall()
+    
+    def get_user_info(self, user_id):
+        # send_time ustunini ham qo'shdik
+        self.cursor.execute("SELECT phone, current_lesson, send_time FROM users WHERE user_id = ?", (user_id,))
+        return self.cursor.fetchone()
 
     def is_start_logged(self, uid): return self.cursor.execute("SELECT sent_start_log FROM users WHERE user_id=?", (uid,)).fetchone()[0]
     def set_start_logged(self, uid): self.cursor.execute("UPDATE users SET sent_start_log=1 WHERE user_id=?", (uid,)); self.conn.commit()
