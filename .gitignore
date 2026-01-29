@@ -1,0 +1,22 @@
+# Maxfiy sozlamalar
+.env
+
+# Ma'lumotlar bazasi
+*.db
+*.sqlite3
+
+# Python kesh fayllari
+__pycache__/
+*.py[cod]
+
+# Hisobotlar va Excel fayllar
+reports/
+
+# Virtual muhit
+venv/
+.venv/
+env/
+
+# IDE sozlamalari
+.vscode/
+.idea/
