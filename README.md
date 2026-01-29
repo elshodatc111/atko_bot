@@ -22,9 +22,10 @@ Bot to'liq ishlashi uchun quyidagi 5 ta kanal/guruh yaratilishi va Bot ularda **
 ```bash
 git clone [https://github.com/usernamingiz/atko_bot.git](https://github.com/usernamingiz/atko_bot.git)
 cd atko_bot
-
+```
 2. Virtual muhit yarating va faollashtiring:
 # Windows uchun:
+```bush
 python -m venv venv
 venv\Scripts\activate
 
